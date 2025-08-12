@@ -1,4 +1,4 @@
-const apiUrl = "https://backend-o7dx.onrender.com"; // Backend base URL
+const apiUrl = import.meta.env.VITE_API_URL; // Backend base URL
 
 interface ApiOptions {
   method?: string;
