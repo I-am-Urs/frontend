@@ -1,4 +1,4 @@
-export const API_BASE_URL = "http://localhost:4000"; // Backend base URL
+const apiUrl = "https://backend-o7dx.onrender.com"; // Backend base URL
 
 interface ApiOptions {
   method?: string;
@@ -8,7 +8,7 @@ interface ApiOptions {
 }
 
 export async function apiFetch<T = any>(path: string, { method = "GET", body, token, headers = {} }: ApiOptions = {}) {
-  const res = await fetch(`${API_BASE_URL}${path}`, {
+  const res = await fetch(`${apiUrl}${path}`, {
     method,
     headers: {
       "Content-Type": "application/json",
